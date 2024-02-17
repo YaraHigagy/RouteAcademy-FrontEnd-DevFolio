@@ -1,0 +1,402 @@
+@import url(styles.css);
+@import url(keyframes.css);
+
+/* ========== Body ========== */
+body {
+    background-color: var(--bg-light-gray);
+    color: var(--font-sub);
+}
+/* ========== Header ========== */
+header {
+    padding: 0.75rem 0;
+    transition: background-color 0.5s;
+}
+body:has(#hero-sec:hover) header {
+    background-color: transparent !important;
+}
+header .dropdown:hover>.dropdown-menu {
+    display: block;
+}
+header .dropdown-item:hover {
+    color: var(--font-azure);
+    background-color: transparent;
+}
+
+header nav>div>ul>li {
+    padding: 10px 0 10px 30px;
+}
+header nav .nav-link {
+    --bs-navbar-nav-link-padding-x: 0;
+    --bs-nav-link-padding-y: 0;
+}
+
+header nav .navbar-collapse {
+    transition: 0.5s ease-in-out;
+}
+/* ========== End Header ========== */
+
+/* ========== Hero Section ========== */
+#hero-sec {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/hero-bg.jpg");
+}
+/* ========== End Hero Section ========== */
+
+/* ========== About ========== */
+#about .progress {
+    --bs-progress-bg: var(--bg-light-azure);
+    --bs-progress-bar-bg: var(--bg-azure);
+    --bs-progress-height: 0.7rem;
+    margin: 0.5rem 0 1.2rem;
+}
+
+#about .title-box {
+    position: relative;
+}
+#about .title-box::before {
+    --top-distance: 0.5rem;
+    --width: 6.25rem;
+    --height: 3px;
+    --transformx: 0;
+}
+/* ========== End About ========== */
+
+/* ========== Services ========== */
+#services .row>div>div>span:has(i) {
+    transition: 0.5s ease;
+}
+#services .row>div:hover>div>span:has(i) {
+    background-color: var(--bg-azure);
+    color: #fff;
+    box-shadow: 0 0 0 10px var(--bg-light-azure);
+}
+/* ========== End Services ========== */
+
+/* ========== Counter Section ========== */
+#counter-sec {
+    --bg-azure: 0, 120, 255;
+
+    background-image: linear-gradient(rgba(var(--bg-azure), 0.7), rgba(var(--bg-azure), 0.7)), url("../imgs/counters-bg.jpg");
+    padding: 8rem 0;
+}
+
+#counter-sec .i-circle {
+    --bg-color: #fff;
+    --width: 3.75rem;
+    --height: 3.75rem;
+}
+/* ========== End Counter Section ========== */
+
+/* ========== Portfolio ========== */
+#portfolio .card>div:first-child>img {
+    transition: 1s;
+}
+#portfolio .card>div:first-child:hover>img {
+    transform: scale(1.3);
+}
+#portfolio .card {
+    --bs-border-radius: 0;
+}
+#portfolio .card-body>div>.col-8>h5 {
+    font-size: 1.2rem;
+}
+#portfolio .card-body>div>.col-8>p {
+    font-size: 0.8rem;
+}
+#portfolio .i-circle {
+    --width: 2.5rem;
+    --height: 2.5rem;
+    --thickness: 3px;
+}
+
+#portfolio .modal {
+    --bs-modal-bg: transparent;
+}
+#portfolio .modal .modal-dialog {
+    --bs-modal-width: auto;
+}
+/* ========== End Portfolio ========== */
+
+/* ========== Testimonials ========== */
+#testimonials {
+    --bg-azure: 0, 120, 255;
+
+    background-image: linear-gradient(rgba(var(--bg-azure), 0.7), rgba(var(--bg-azure), 0.7)), url("../imgs/overlay-bg.jpg");
+    padding: 8rem 0;
+}
+
+#testimonials .carousel .carousel-item>div:has(img) {
+    max-width: 9.375rem;
+    max-height: 9.375rem;
+}
+#portfolio-details .carousel-indicators [data-bs-target] {
+    --bg-color: #fff;
+}
+/* ========== End Testimonials ========== */
+
+/* ========== Blog ========== */
+#blog .card>div:has(img) {
+    position: relative;
+}
+#blog .card>div:has(img) .badge {
+    padding: 10px 15px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+}
+
+#blog .card-footer>div:has(img) {
+    max-width: 2rem;
+    max-height: 2rem;
+}
+/* ========== End Blog ========== */
+
+/* ========== Contact ========== */
+#contact {
+    --bg-azure: 0, 120, 255;
+
+    background-image: linear-gradient(rgba(var(--bg-azure), 0.7), rgba(var(--bg-azure), 0.7)), url("../imgs/overlay-bg.jpg");
+    padding: 8rem 0 3rem 0;
+    margin-top: 4rem;
+}
+#contact .container {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#contact .title-box {
+    position: relative;
+}
+#contact .title-box::before {
+    --bg-azure: rgb(13, 110, 253);
+
+    --top-distance: 0.5rem;
+    --width: 6.25rem;
+    --height: 3px;
+    --transformx: 0;
+}
+
+#contact form .form-control {
+    --py: 0.625rem;
+    --px: 15px;
+}
+#contact form input:focus,
+#contact form textarea:focus {
+    --bg-azure: rgb(13, 110, 253);
+
+    border-color: var(--bg-azure);
+}
+#contact form .btn {
+    --bs-btn-padding-x: 1.5rem;
+    --bs-btn-padding-y: 0.625rem;
+}
+#contact form #submit-error {
+    display: none;
+}
+#contact form button.col-md-6,
+#contact form a.col-md-6.btn {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+#contact form #submit-error:target {
+    display: block;
+}
+
+#contact ul>li>div {
+    width: 0.75rem;
+}
+
+#contact ul:last-child>li {
+    list-style: none;
+}
+#contact .i-circle {
+    --bg-color: rgb(13, 110, 253);
+    --width: 2.5rem;
+    --height: 2.5rem;
+    --thickness: 3px;
+    transition: 0.5s ease;
+}
+#contact ul:last-child>li .i-circle:hover{
+    background-color: var(--bg-color);
+    color: #fff;
+    box-shadow: 0 0 0 3px var(--bg-light-azure);
+}
+/* ========== End Contact ========== */
+
+/* ========== Footer ========== */
+footer {
+    --bg-azure: rgb(0, 98, 211);
+
+    background-color: var(--bg-azure);
+}
+/* ========== End Footer ========== */
+
+/* ========== Back to Top btn ========== */
+.back-to-top {
+    --bg-azure: rgb(0, 120, 255);
+
+    background-color: var(--bg-azure);
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    opacity: 1;
+    transition: 0.3s;
+}
+body:has(#hero-sec:hover) .back-to-top {
+    opacity: 0;
+}
+/* ========== End Back to Top btn ========== */
+
+
+
+
+
+/* ========== Media Query ========== */
+/* Extra Small devices (mobiles, 576px and up) */
+@media (max-width: 576px) {
+    header nav>.navbar-collapse>ul>li>a {
+        transition: 0.3s ease-in-out;
+    }
+    header nav>.navbar-collapse>ul>li>a:hover,
+    header nav>.navbar-collapse>ul>li>a.active,
+    body:has(#hero-sec:hover) header nav>.navbar-collapse>ul>li>a[href="index.html"],
+    body:has(#about:hover) header nav>.navbar-collapse>ul>li>a[href="#about"],
+    body:has(#services:hover) header nav>.navbar-collapse>ul>li>a[href="#services"],
+    body:has(#portfolio:hover) header nav>.navbar-collapse>ul>li>a[href="#portfolio"],
+    body:has(#blog:hover) header nav>.navbar-collapse>ul>li>a[href="#blog"],
+    body:has(#contact:hover) header nav>.navbar-collapse>ul>li>a[href="#contact"] 
+    {color: var(--bg-azure) !important;}
+
+    header nav .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 1rem;
+        margin: 1rem;
+    }
+    header nav .navbar-collapse ul li a {
+        color: var(--font-main) !important;
+    }
+
+    #portfolio .modal .carousel-control-prev {
+        top: -200%;
+    }
+    #portfolio .modal .carousel-control-next {
+        bottom: -200%;
+    }
+}
+
+/* Small devices (mobiles, 576px and up) */
+@media (min-width: 576px) {
+    .fs-sm-hero-title {
+        font-size: 3rem;
+    }
+    .fs-sm-hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    header nav>.navbar-collapse>ul>li>a {
+        transition: 0.3s ease-in-out;
+    }
+    header nav>.navbar-collapse>ul>li>a:hover,
+    header nav>.navbar-collapse>ul>li>a.active,
+    body:has(#hero-sec:hover) header nav>.navbar-collapse>ul>li>a[href="index.html"],
+    body:has(#about:hover) header nav>.navbar-collapse>ul>li>a[href="#about"],
+    body:has(#services:hover) header nav>.navbar-collapse>ul>li>a[href="#services"],
+    body:has(#portfolio:hover) header nav>.navbar-collapse>ul>li>a[href="#portfolio"],
+    body:has(#blog:hover) header nav>.navbar-collapse>ul>li>a[href="#blog"],
+    body:has(#contact:hover) header nav>.navbar-collapse>ul>li>a[href="#contact"] 
+    {color: var(--bg-azure) !important;}
+
+    #portfolio .modal .carousel-control-prev {
+        top: 0;
+    }
+    #portfolio .modal .carousel-control-next {
+        bottom: 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .fs-md-hero-title {
+        font-size: 4.5rem;
+    }
+    .fs-md-h2-hero-title {
+        font-size: 3.5rem;
+    }
+    .fs-md-hero-subtitle {
+        font-size: 2.5rem;
+    }
+}
+
+/* Large devices (Screens, 992px and up) */
+@media (min-width: 992px) { 
+    .end-lg-100 {
+        right: 100%;
+    }
+
+    header nav>.navbar-collapse>ul>li>a {
+        color: #fff !important;
+        position: relative;
+    }
+    header nav>.navbar-collapse>ul>li>a:hover,
+    header nav>.navbar-collapse>ul>li>a.active,
+    body:has(#hero-sec:hover) header nav>.navbar-collapse>ul>li>a[href="index.html"],
+    body:has(#about:hover) header nav>.navbar-collapse>ul>li>a[href="#about"],
+    body:has(#services:hover) header nav>.navbar-collapse>ul>li>a[href="#services"],
+    body:has(#portfolio:hover) header nav>.navbar-collapse>ul>li>a[href="#portfolio"],
+    body:has(#blog:hover) header nav>.navbar-collapse>ul>li>a[href="#blog"],
+    body:has(#contact:hover) header nav>.navbar-collapse>ul>li>a[href="#contact"]  {
+        color: #fff !important;
+    }
+    header nav>.navbar-collapse>ul>li>a::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        background-color: #fff;
+        width: 0;
+        height: 2px;
+        transition: 0.3s ease-in-out;
+    }
+    header nav>.navbar-collapse>ul>li>a:hover::before,
+    header nav>.navbar-collapse>ul>li>a.active::before,
+    body:has(#hero-sec:hover) header nav>.navbar-collapse>ul>li>a[href="index.html"]::before,
+    body:has(#about:hover) header nav>.navbar-collapse>ul>li>a[href="#about"]::before,
+    body:has(#services:hover) header nav>.navbar-collapse>ul>li>a[href="#services"]::before,
+    body:has(#portfolio:hover) header nav>.navbar-collapse>ul>li>a[href="#portfolio"]::before,
+    body:has(#blog:hover) header nav>.navbar-collapse>ul>li>a[href="#blog"]::before,
+    body:has(#contact:hover) header nav>.navbar-collapse>ul>li>a[href="#contact"]::before {
+        width: 80%;
+    }
+    header nav>.navbar-collapse>ul:has(li>a:active)>li>a.active::before,
+    body:has(#about:hover) header nav>.navbar-collapse>ul>li>a:not([href="#about"])::before,
+    body:has(#services:hover) header nav>.navbar-collapse>ul>li>a:not([href="#services"])::before,
+    body:has(#portfolio:hover) header nav>.navbar-collapse>ul>li>a:not([href="#portfolio"])::before,
+    body:has(#blog:hover) header nav>.navbar-collapse>ul>li>a:not([href="#blog"])::before,
+    body:has(#contact:hover) header nav>.navbar-collapse>ul>li>a:not([href="#contact"])::before {
+        width: 0;
+    }
+
+    body:has(#hero-sec:hover) header nav .navbar-collapse {
+        background-color: transparent !important;
+        border: initial;
+        border-bottom-left-radius: initial;
+        border-bottom-right-radius: initial;
+        padding: initial;
+        margin: initial;
+    }
+
+    #portfolio .modal .modal-dialog .carousel-inner {
+        max-width: 960px;
+    }
+    
+}
+
+@media (min-width: 1200px) { 
+    #portfolio .modal .carousel .carousel-control-prev {
+        transform: translate(-110%);
+    }
+    #portfolio .modal .carousel .carousel-control-next {
+        transform: translate(110%);
+    }
+}

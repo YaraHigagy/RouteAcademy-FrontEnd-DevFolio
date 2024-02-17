@@ -1,0 +1,308 @@
+:root {
+    --bg-light-gray: rgb(245, 245, 245);
+    --bg-azure: rgb(13, 110, 253);
+    --bg-light-azure: rgb(205, 225, 248);
+    --bg-orange: rgb(237, 60, 13);
+
+    --font-main: rgb(30, 30, 30);
+    --font-sub: rgb(78, 78, 78);
+    --font-azure: rgb(13, 110, 253);
+}
+
+/* ========== Background Color Opacity ========== */
+.bg-image {
+    background-color: var(--bg-light-gray);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-black {
+    --bs-dark-rgb: rgb(0, 0, 0);
+}
+.bg-azure {
+    background-color: var(--bg-azure);
+}
+.bg-orange {
+    background-color: var(--bg-orange);
+}
+
+.bg-opacity-90 {
+    --bs-bg-opacity: .9;
+}
+
+/* ========== Color Shadow ========== */
+.text-gray {
+    color: var(--font-sub);
+}
+
+.shadow-b {
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+/* ========== Width ========== */
+.min-w-12-half {
+    --bs-dropdown-min-width: 12.5rem;
+}
+
+/* ========== Font ========== */
+.pt-sec {
+    padding-top: 4rem;
+}
+.pt-sec-serv {
+    padding-top: 3rem;
+}
+.px-sec-sub {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+.py-sec-sub {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.px-card {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+.py-card-services {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+.p-card-services {
+    padding: 2.5rem 1.3rem;
+}
+.p-18px {
+    padding: 1.125rem;
+}
+.p-30px {
+    padding: 1.875rem;
+}
+.p-48px {  /* not important == p-4 */
+    padding: 3rem;
+}
+.pt-30px {
+    padding-top: 1.875rem;
+}
+.pb-20px {
+    padding-bottom: 1.25rem;
+}
+.pt-40px {
+    padding-top: 2.5rem;
+}
+.pb-40px {
+    padding-bottom: 2.5rem;
+}
+
+.mb-sec-sub {
+    margin-bottom: 3rem;
+}
+.mb-title-center {
+    margin-bottom: 4rem;
+}
+.mt-20px {
+    margin-top: 1.25rem;
+}
+.mt-10px {
+    margin-top: 0.625rem;
+}
+.mb-20px {
+    margin-bottom: 1.25rem;
+}
+.mb-40px {
+    margin-bottom: 2.5rem;
+}
+.ms-40px {
+    margin-left: 2.5rem;
+}
+
+/* ========== Font ========== */
+.font-bs {
+    font-family: bootstrap-icons !important;
+}
+
+.text-main {
+    color: var(--font-main);
+}
+.text-sub {
+    color: var(--font-sub);
+}
+.text-azure {
+    color: var(--font-azure);
+}
+
+.fs-7 {
+    font-size: 0.875rem;
+}
+.fs-hero-title {
+    font-size: 4.5rem;
+}
+.fs-hero-subtitle {
+    font-size: 2.5rem;
+}
+.fs-title-s {
+    font-size: 1.1rem;
+}
+.fs-title-portfolio {
+    font-size: 1.2rem;
+}
+.fs-title- {
+    font-size: 1.3rem;
+}
+.fs-title-services {
+    font-size: 1.4rem;
+}
+.fs-title-aside {
+    font-size: 1.6rem;
+}
+.fs-title-center {
+    font-size: 3rem;
+}
+.fs-title-left {
+    font-size: 2rem;
+}
+.fs-12px {
+    font-size: 0.75rem;
+}
+.fs-22px {
+    font-size: 1.375rem;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.tracking-1 {
+    letter-spacing: 1px;
+}
+.tracking-004 {
+    letter-spacing: 0.4px;
+}
+
+/* ========== Position ========== */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* ========== Elements ========== */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.title-box {
+    position: relative;
+}
+.title-box::before {
+    --top-distance: 1rem;
+    --bg-color: var(--bg-azure);
+    --width: 2.5rem;
+    --height: 5px;
+    --transformx: -50%;
+
+    content: '';
+    position: absolute;
+    top: calc(100% + var(--top-distance));
+    background-color: var(--bg-color);
+    width: var(--width);
+    height: var(--height);
+    transform: translatex(var(--transformx));
+}
+
+.i-circle {
+    --bg-color: var(--bg-azure);
+    --width: 6.25rem;
+    --height: 6.25rem;
+    --thickness: 10px;
+
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0 0 0 var(--thickness) var(--bg-color);
+    border-radius: 50%;
+}
+
+.carousel-indicators [data-bs-target] {
+    --bg-color: #fff;
+    --width: 0.75rem;
+    --height: 0.75rem;
+    --border-radius: 50%;
+    --border-color: var(--bg-azure);
+    --border-thickness: 1px;
+    --ms: 4px;
+    --me: 4px;
+
+    background-color: var(--bg-color);
+    width: var(--width);
+    height: var(--height);
+    border: var(--border-thickness) solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin-right: var(--ms);
+    margin-left: var(--me);
+}
+
+.border-left {
+    --border-width: 5px;
+    --border-style: solid;
+    --border-color: var(--bg-azure);
+
+    border-left: var(--border-width) var(--border-style) var(--border-color);
+}
+
+.form-control {
+    --py: 0.5rem;
+    --px: 1rem;
+
+    padding: var(--py) var(--px);
+}
+
+.btn-azure {
+    --bg-azure: rgb(13, 110, 253);
+
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--bg-azure);
+    --bs-btn-border-color: var(--bg-azure);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0b5ed7;
+    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--bg-azure);
+    --bs-btn-disabled-border-color: var(--bg-azure);
+
+    transition: 0.5s ease;
+}
+.btn-azure:hover {
+    box-shadow: 0 0 0 4px rgb(205, 225, 248);
+}
+
+.tag {
+    --bg-color: var(--bg-azure);
+    --py: 0.2rem;
+    --px: 0.6rem;
+    --mb: 0.5rem;
+    --me: 0.3rem;
+    --border-radius: 15px;
+
+    background-color: var(--bg-color);
+    padding: var(--py) var(--px);
+    margin-bottom: var(--mb);
+    margin-right: var(--me);
+    border-radius: var(--border-radius);
+}
+
+
+
+/* ========== Media Query ========== */
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .px-md-sec-sub {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
