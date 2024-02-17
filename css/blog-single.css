@@ -1,0 +1,73 @@
+@import url(styles.css);
+
+/* ========== Hero Section ========== */
+#hero-sec {
+    --bg-azure: 0, 120, 255;
+
+    background-image: linear-gradient(rgba(var(--bg-azure), 0.7), rgba(var(--bg-azure), 0.7)), url("../imgs/overlay-bg.jpg");
+    height: 50vh;
+}
+#hero-sec ul>li>span {
+    padding-left: 0.5rem;
+}
+#hero-sec ul>li>span::before {
+    content: '/';
+    padding-right: 0.5rem;
+}
+/* ========== End Hero Section ========== */
+
+/* ========== Blog Single ========== */
+#blog-single .title-box {
+    position: relative;
+}
+#blog-single .title-box::before {
+    --top-distance: 0.5rem;
+    --width: 6.25rem;
+    --height: 3px;
+    --transformx: 0;
+}
+
+#blog-single .comment .comment-avatar img {
+    max-width: 80px;
+}
+
+#blog-single form .form-control {
+    --py: 0.375rem;
+    --px: 0.75rem;
+}
+
+#blog-single #reply form .btn {
+    --bs-btn-padding-x: 2.3rem;
+    --bs-btn-padding-y: 0.9rem;
+    --bs-btn-font-size: 1.2rem;
+}
+
+#blog-single .search-box form .btn {
+    --bs-btn-padding-x: 1.25rem;
+    --bs-btn-padding-y: 0.375rem;
+}
+#blog-single .search-box form .btn-azure {
+    --bs-btn-active-bg: #565e64;
+
+}
+
+#blog-single aside ul>li:has(.link) {
+    padding: 0.375rem 0 0.375rem 1.5rem;
+    position: relative;
+}
+#blog-single aside ul>li:has(.link)::before {
+    content: '';
+    position: absolute;
+    width: 0.625rem;
+    height: 1px;
+    left: 0;
+    top: 1.25rem;
+    background-color: var(--bg-azure);
+}
+#blog-single aside ul>li .link:hover{
+    transition: 0.5s ease-in-out;
+}
+#blog-single aside ul>li .link:hover{
+    color: var(--bg-azure);
+}
+/* ========== End Blog Single ========== */
